@@ -1,8 +1,7 @@
 import server from './backend/mock-server'
 import React from 'react'
 import AppFunctional from './frontend/components/AppFunctional'
-// ❗ class component is optional, uncomment next line to test
-//import AppClass from './frontend/components/AppClass'
+import AppClass from './frontend/components/AppClass'
 import { render, fireEvent, screen } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
 
@@ -48,13 +47,12 @@ test('AppFunctional is a functional component', () => {
     AppFunctional.prototype.isReactComponent
   ).not.toBeTruthy()
 });
-// ❗ class component is optional, uncomment next lines to test
-//test('AppClass is a class-based component', () => {
-//   expect(
-//     AppClass.prototype &&
-//     AppClass.prototype.isReactComponent
-//   ).toBeTruthy()
-// });
+test('AppClass is a class-based component', () => {
+   expect(
+     AppClass.prototype &&
+     AppClass.prototype.isReactComponent
+   ).toBeTruthy()
+ });
 
 // ❗ class component is optional, uncomment AppClass to test
 [AppFunctional, /* AppClass */].forEach((Component, idx) => {

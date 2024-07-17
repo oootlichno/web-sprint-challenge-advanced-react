@@ -10,7 +10,7 @@ const matrix = [
 const initialMessage = ''
 const initialEmail = ''
 const initialSteps = 0
-const initialIndex = 4 // the index the "B" is at initially
+const initialIndex = 4 
 
 const postURL = 'http://localhost:9000/api/result'
 
